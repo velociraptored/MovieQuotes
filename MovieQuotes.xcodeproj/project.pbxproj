@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AA214E02073D121003E7582 /* MovieQuoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA214DF2073D121003E7582 /* MovieQuoteDetailViewController.swift */; };
+		0AA214E92073DC34003E7582 /* MovieQuotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AA214E72073DC34003E7582 /* MovieQuotes.xcdatamodeld */; };
+		0AE533FC206D3800006CCC6F /* MovieQuotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE533FB206D3800006CCC6F /* MovieQuotesTableViewController.swift */; };
 		0AF8DEFF206AA2DF004B70F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8DEFE206AA2DF004B70F7 /* AppDelegate.swift */; };
-		0AF8DF02206AA2DF004B70F7 /* MovieQuotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8DF00206AA2DF004B70F7 /* MovieQuotes.xcdatamodeld */; };
 		0AF8DF09206AA2DF004B70F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8DF07206AA2DF004B70F7 /* Main.storyboard */; };
 		0AF8DF0B206AA2DF004B70F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8DF0A206AA2DF004B70F7 /* Assets.xcassets */; };
 		0AF8DF0E206AA2DF004B70F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8DF0C206AA2DF004B70F7 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AA214DF2073D121003E7582 /* MovieQuoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieQuoteDetailViewController.swift; sourceTree = "<group>"; };
+		0AA214E82073DC34003E7582 /* MovieQuotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MovieQuotes.xcdatamodel; sourceTree = "<group>"; };
+		0AE533FB206D3800006CCC6F /* MovieQuotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieQuotesTableViewController.swift; sourceTree = "<group>"; };
 		0AF8DEFB206AA2DF004B70F7 /* MovieQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF8DEFE206AA2DF004B70F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0AF8DF01206AA2DF004B70F7 /* MovieQuotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MovieQuotes.xcdatamodel; sourceTree = "<group>"; };
 		0AF8DF08206AA2DF004B70F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0AF8DF0A206AA2DF004B70F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AF8DF0D206AA2DF004B70F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,9 +61,11 @@
 				0AF8DEFE206AA2DF004B70F7 /* AppDelegate.swift */,
 				0AF8DF07206AA2DF004B70F7 /* Main.storyboard */,
 				0AF8DF0A206AA2DF004B70F7 /* Assets.xcassets */,
+				0AA214E72073DC34003E7582 /* MovieQuotes.xcdatamodeld */,
 				0AF8DF0C206AA2DF004B70F7 /* LaunchScreen.storyboard */,
+				0AE533FB206D3800006CCC6F /* MovieQuotesTableViewController.swift */,
 				0AF8DF0F206AA2DF004B70F7 /* Info.plist */,
-				0AF8DF00206AA2DF004B70F7 /* MovieQuotes.xcdatamodeld */,
+				0AA214DF2073D121003E7582 /* MovieQuoteDetailViewController.swift */,
 			);
 			path = MovieQuotes;
 			sourceTree = "<group>";
@@ -136,8 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AA214E92073DC34003E7582 /* MovieQuotes.xcdatamodeld in Sources */,
 				0AF8DEFF206AA2DF004B70F7 /* AppDelegate.swift in Sources */,
-				0AF8DF02206AA2DF004B70F7 /* MovieQuotes.xcdatamodeld in Sources */,
+				0AE533FC206D3800006CCC6F /* MovieQuotesTableViewController.swift in Sources */,
+				0AA214E02073D121003E7582 /* MovieQuoteDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,12 +330,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		0AF8DF00206AA2DF004B70F7 /* MovieQuotes.xcdatamodeld */ = {
+		0AA214E72073DC34003E7582 /* MovieQuotes.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				0AF8DF01206AA2DF004B70F7 /* MovieQuotes.xcdatamodel */,
+				0AA214E82073DC34003E7582 /* MovieQuotes.xcdatamodel */,
 			);
-			currentVersion = 0AF8DF01206AA2DF004B70F7 /* MovieQuotes.xcdatamodel */;
+			currentVersion = 0AA214E82073DC34003E7582 /* MovieQuotes.xcdatamodel */;
 			path = MovieQuotes.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

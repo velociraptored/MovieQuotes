@@ -9,7 +9,7 @@
 import UIKit
 
 class MovieQuoteDetailViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit,
@@ -21,7 +21,8 @@ class MovieQuoteDetailViewController: UIViewController {
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var movieLabel: UILabel!
     var movieQuote: MovieQuote?
-    
+    var movieQuoteRef: DocumentReference?
+    var MovieListener: Listener //?syntax?
     func save(){
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
     }
@@ -52,19 +53,41 @@ class MovieQuoteDetailViewController: UIViewController {
         }
         
         
+        override func viewWillAppear(_animated: Bool){//
+            super.viewWillAppear(animated)
+            self.movieQuotes.removeAll() ///
+            movieQuoteListener = movieQquoteRef?.addSnapshotListener({(documentSnapshot,error) in
+                if let error = error{
+                    print("error getting doc: \(error.localizedDescription)")
+                return
+                }
+                if !documentSnapshot!.exists {///*
+                    return
+                }
+                self.movieQuote = MovieQuote(documentSnapshot: documentSnapshot)
+                self.updateView()///*
+            })
+        }
+        override func viewWillDisappear(_ animated: Bool){//
+            super.viewWillDisappear(animated)
+            movieQuoteListener.remove()
+        }
+        
         let cancelAction = UIAlertAction(title: "cancel",
                                          style: UIAlertActionStyle.cancel,
                                          handler:nil)
         
-        let createQuoteAction = UIAlertAction(title: "Create quote",
+        let EditQuoteAction = UIAlertAction(title: "Edit", ///
                                               style: UIAlertActionStyle.default) {
                                                 (action) in
                                                 let quoteTextField = alertController.textFields![0]
                                                 let movieTextField = alertController.textFields![1]
                                                 self.movieQuote?.quote = quoteTextField.text!
                                                 self.movieQuote?.movie = movieTextField.text!
-                                                self.save();
-                                                self.updateView()
+                                                /*self.save()///
+                                                self.updateView()*////
+                                                self.movieQuoteRef?.setData(self.movieQuote!.data)///
+                                                
         }
         
         alertController.addAction(cancelAction)
@@ -81,6 +104,9 @@ class MovieQuoteDetailViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+ 
+    segue:
+    (segue.destination as! MovieQuotesetailctrl).movieQuoteRef = quoteReg.document(movieQuotes[indexPath.row].id!)
+ */
 
 }
